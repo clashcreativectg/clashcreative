@@ -1,0 +1,262 @@
+/* === Base === */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* === Navbar === */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.nav__logo .nav__title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #0d6efd;
+  margin: 0;
+  transform: translateX(-100px);
+  opacity: 0;
+  animation: slideInLogo 1s forwards 0.3s; /* Animación para el logo */
+}
+
+@keyframes slideInLogo {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.nav__link {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  animation: fadeInLinks 1s forwards 0.5s; /* Animación de los enlaces */
+}
+
+@keyframes fadeInLinks {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav__items {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.nav__links {
+  text-decoration: none;
+  color: rgb(0, 140, 255);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav__links:hover {
+  color: #0d6efd;
+  transform: scale(1.1); /* Efecto de escala en hover */
+}
+
+/* Animación de apertura/cierre del menú móvil */
+.nav__menu,
+.nav__close {
+  display: none;
+  opacity: 0;
+  transform: translateX(100px);
+  animation: menuSlideIn 0.5s forwards;
+}
+
+@keyframes menuSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Si el menú está activo, lo mostramos */
+.nav__menu.active,
+.nav__close.active {
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.nav__close.active {
+  animation: menuSlideOut 0.5s forwards;
+}
+
+@keyframes menuSlideOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+}
+
+
+/* === Contact Section === */
+.contact-section {
+  padding: 140px 20px 60px; /* Compensa la navbar fija */
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.contact-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #0d6efd;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+  position: relative;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.2);
+  outline: none;
+}
+
+.form-group.focused input,
+.form-group.focused textarea {
+  border-color: #0d6efd;
+  box-shadow: 0 0 10px rgba(62, 100, 255, 0.2);
+}
+
+/* === Animación de botón de envío === */
+button {
+  background-color: #0d6efd;
+  color: white;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #003366;
+}
+
+button.submitting {
+  background-color: #b0b0b0;
+  cursor: not-allowed;
+  transform: scale(0.98);
+}
+
+.divider {
+  margin: 40px 0;
+  font-weight: 600;
+  color: #aaa;
+}
+
+/* === WhatsApp Button === */
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 25px;
+  background-color: #25D366;
+  color: white;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebe5d;
+}
+
+/* === Animación de campos de entrada === */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.2);
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.2);
+  outline: none;
+}

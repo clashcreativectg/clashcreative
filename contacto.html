@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Formulario de contacto de Clash Creative. Escríbenos tu proyecto y te responderemos lo antes posible.">
+  <title>Contacto | Clash Creative</title>
+  <link rel="shortcut icon" href="/img/clash_creative.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/contacto.css" />
+  <script defer src="/js/contacto.js"></script>
+</head>
+<body>
+
+  <header class="hero">
+    <nav class="nav container">
+      <div class="nav__logo">
+        <h2 class="nav__title">Clash Creative.</h2>
+      </div>
+
+      <ul class="nav__link nav__link--menu">
+        <li class="nav__items">
+          <a href="#" class="nav__links">Inicio</a>
+        </li>
+        <li class="nav__items">
+          <a href="Acerca de.html" class="nav__links">Quienes somos</a>
+        </li>
+        <li class="nav__items">
+          <a href="portafolio.html" class="nav__links">Portafolio</a>
+        </li>
+        <li class="nav__items">
+          <a href="blog.html" class="nav__links">Blog</a>
+        </li>
+        <li class="nav__items">
+          <a href="contacto.html" class="nav__links">Contacto</a>
+        </li>
+        <img src="/img/close.svg" class="nav__close" alt="Cerrar menú">
+      </ul>
+
+      <div class="nav__menu">
+        <img src="/img/menu.svg" class="nav__img" alt="Abrir menú">
+      </div>
+    </nav>
+  </header>
+
+  <section class="contact-section">
+    <div class="container">
+      <h2>Contáctanos</h2>
+      <p>¿Tienes un proyecto en mente? Escríbenos y te responderemos lo antes posible.</p>
+
+      <form action="https://formspree.io/f/mpwdrdkq" method="POST">
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit">Enviar por Email</button>
+      </form>
+      <div class="divider">o</div>
+
+      <a class="whatsapp-btn" href="https://wa.me/573127307351" target="_blank">
+        <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp" />
+        Escríbenos por WhatsApp
+      </a>
+    </div>
+</section>
+
+</body>
+</html>

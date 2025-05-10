@@ -1,0 +1,152 @@
+/* --- General Styles --- */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* --- Navbar --- */
+.navbar {
+  background-color: #212529 !important;
+}
+
+.navbar-nav .nav-link {
+  color: #f8f9fa !important;
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link.active {
+  color: #2091F9 !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #2091F9 !important;
+}
+
+/* --- Hero Section --- */
+header {
+  background-image: url('/img/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 80px 0;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+header p {
+  font-size: 1.3rem;
+}
+
+/* --- About Section --- */
+section {
+  padding: 60px 0;
+}
+
+.about__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about__main img {
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about__content {
+  max-width: 650px;
+}
+
+.about__content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about__content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* --- Services Section --- */
+.bg-light {
+  background-color: #f4f6f9 !important;
+}
+
+.text-primary {
+  color: #2091F9 !important;
+}
+
+h4 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.text-center p {
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+/* --- CTA WhatsApp Section --- */
+.bg-primary {
+  background-color: #2091F9 !important;
+}
+
+.bg-primary .btn {
+  background-color: #ffffff;
+  color: #2091F9;
+  font-weight: 600;
+  padding: 12px 25px;
+  border-radius: 30px;
+}
+
+.bg-primary .btn:hover {
+  background-color: #f8f9fa;
+  color: #2091F9;
+}
+
+/* --- Footer --- */
+footer {
+  background-color: #212529;
+  color: white;
+  font-size: 1rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .about__main {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about__main img {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .about__content h2 {
+    font-size: 2rem;
+  }
+
+  .bg-primary .btn {
+    padding: 10px 20px;
+  }
+}
