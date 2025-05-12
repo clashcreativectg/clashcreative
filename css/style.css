@@ -65,6 +65,7 @@ body {
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: 2em;
+    color:#fff;
 }
 
 .nav__items {
